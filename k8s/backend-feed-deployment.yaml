@@ -26,7 +26,7 @@ spec:
           resources:
             requests:
               memory: "128Mi"
-              cpu: "500m"
+              cpu: "300m"
             limits:
               memory: "2048Mi"
               cpu: "2000m"
@@ -68,7 +68,7 @@ spec:
                   key: AWS_PROFILE
             - name: JWT_SECRET
               valueFrom:
-                configMapKeyRef:
+                secretKeyRef:
                   name: env-secret
                   key: JWT_SECRET
             - name: URL
